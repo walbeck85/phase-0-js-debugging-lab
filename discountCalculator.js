@@ -1,17 +1,22 @@
 function calculateDiscountedPrice(quantity, pricePerItem) {
-    let totalPrice = 0;
-    debugger
-    for (let i = 1; i < quantity; i++) {
-        totalPrice += pricePerItem;
-    }
+  debugger; // Start here
 
-    if (quantity >= 10) {
-        totalPrice *= 0.9;
-    }
+  let totalPrice = 0;
 
-    return totalPrice;
+  for (let i = 0; i < quantity; i++) {
+    debugger; // Loop watch
+    totalPrice += pricePerItem;
+  }
+
+  if (quantity >= 10) {
+    debugger; // Discount check
+    totalPrice *= 0.9;
+  }
+
+  return totalPrice;
 }
 
-
-
 module.exports = calculateDiscountedPrice;
+
+// Run the function (so the debugger has something to do)
+calculateDiscountedPrice(10, 5);
